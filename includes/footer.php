@@ -4,9 +4,9 @@
     <div class="row">
       <div class="col-lg-3  col-md-6 col-sm-6">
         <div class="single-footer-widget">
-          <h6>About Agency</h6>
+          <h6>Target Spicies</h6>
           <p>
-            The world has become so fast paced that people don’t want to stand by reading a page of information, they would much rather look at a presentation and understand the message. It has come to a point
+            African Piculet , Black Bee-eater , Chapins Flycatcher , Dusky Crimsonwing , Dwarf Honeyguide , Grauer’s Broadbill , Green-breasted Pitta , Lagdens Bushshrike , Neumann's Warbler , orange cheeked &nbsp; <a href="./about.php">more </a>
           </p>
         </div>
       </div>
@@ -16,18 +16,10 @@
           <div class="row">
             <div class="col">
               <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Feature</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-              </ul>
-            </div>
-            <div class="col">
-              <ul>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="./index.php">Home</a></li>
+                <li><a href="./about.php">About</a></li>
+                <li><a href="./contact.php">Conact Us</a></li>
+                <li><a href="./destinations.php">Our Destinations</a></li>
               </ul>
             </div>
           </div>
@@ -37,7 +29,7 @@
         <div class="single-footer-widget">
           <h6>Newsletter</h6>
           <p>
-            For business professionals caught between high OEM price and mediocre print and graphic output.
+            Subscribe to our news leter so that you never miss any of out offers and new services.
           </p>
           <div id="mc_embed_signup">
             <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscription relative">

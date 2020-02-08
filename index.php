@@ -25,15 +25,14 @@
   <section class="top-category-widget-area pt-90 pb-90 ">
     <div class="container">
       <div class="row">
-        <?php for ($i=0; $i <3 ; $i++) {
-        ?>
+
         <div class="col-lg-4">
           <div class="single-cat-widget">
             <div class="content relative">
               <div class="overlay overlay-bg"></div>
                 <a href="#" target="_blank">
                   <div class="thumb">
-                   <img class="content-image img-fluid d-block mx-auto" src="assets/img/blog/cat-widget1.jpg" style="width: 100%; height: 200px;" alt="">
+                   <img class="content-image img-fluid d-block mx-auto" src="assets/img/blog/bwatch.jpg" style="width: 100%; height: 200px;" alt="">
                   </div>
                   <div class="content-details">
                     <h4 class="content-title mx-auto text-uppercase">Bird watching</h4>
@@ -47,7 +46,46 @@
           </div>
         </div>
 
-      <?php } ?>
+        <div class="col-lg-4">
+          <div class="single-cat-widget">
+            <div class="content relative">
+              <div class="overlay overlay-bg"></div>
+                <a href="#" target="_blank">
+                  <div class="thumb">
+                   <img class="content-image img-fluid d-block mx-auto" src="assets/img/blog/gtrek.jpg" style="width: 100%; height: 200px;" alt="">
+                  </div>
+                  <div class="content-details">
+                    <h4 class="content-title mx-auto text-uppercase">Gorilla Treking</h4>
+                    <span></span>
+                    <p>
+                      <!-- simple desc -->
+                    </p>
+                  </div>
+                </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="single-cat-widget">
+            <div class="content relative">
+              <div class="overlay overlay-bg"></div>
+                <a href="#" target="_blank">
+                  <div class="thumb">
+                   <img class="content-image img-fluid d-block mx-auto" src="assets/img/blog/travel.jpg" style="width: 100%; height: 200px;" alt="">
+                  </div>
+                  <div class="content-details">
+                    <h4 class="content-title mx-auto text-uppercase">Travel Advisory  </h4>
+                    <span></span>
+                    <p>
+                      <!-- simple desc -->
+                    </p>
+                  </div>
+                </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -73,7 +111,7 @@
             </div>
             <div class="col-lg-9 col-md-9 ">
               <div class="feature-img">
-                <img class="img-fluid" src="assets/img/blog/feature-img1.jpg" style="width: 100%; height: 300px" alt="">
+                <img class="img-fluid" src="assets/img/blog/feature-img1.jpg" style="width: 100%; height: 270px" alt="">
               </div>
               <a class="posts-title" href="blog-single.html"><h3>Astronomy Binoculars A Great Alternative</h3></a>
               <p class="excert">

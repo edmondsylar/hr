@@ -4,16 +4,15 @@
       <div class="row align-items-center">
         <div class="col-lg-6 col-sm-6 col-6 header-top-left">
           <ul>
-            <li><a href="#">Visit Us</a></li>
-            <li><a href="#">Buy Tickets</a></li>
+            <li><a href="#">Contact US</a></li>
+            <!-- <li><a href="#">Buy Tickets</a></li> -->
           </ul>
         </div>
         <div class="col-lg-6 col-sm-6 col-6 header-top-right">
         <div class="header-social">
           <a href="#"><i class="fa fa-facebook"></i></a>
           <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-dribbble"></i></a>
-          <a href="#"><i class="fa fa-behance"></i></a>
+          <a href="#"><i class="fa fa-google"></i></a>
         </div>
         </div>
       </div>
