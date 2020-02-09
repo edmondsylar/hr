@@ -9,7 +9,7 @@
       <div class="row d-flex align-items-center justify-content-center">
         <div class="about-content blog-header-content col-lg-12">
           <h1 class="text-white">
-            Over the horizon
+            horizon birdings
           </h1>
           <p class="text-white">
             Specialists in Bird watching, if you really want to see the most Endemic bird species in the country.
@@ -113,18 +113,18 @@
                    </ul>
                    <div class="user-details row">
                      <!-- <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p> -->
-                     <p class="date col-lg-12 col-md-12 col-6"><a href="#">Make reseravtion</a> <span class="lnr lnr-calendar-full"></span></p>
+                     <p class="date col-lg-12 col-md-12 col-6"><a href="bookings.php?destination=<?php echo $value['id'] ?>">Make reseravtion</a> <span class="lnr lnr-calendar-full"></span></p>
                    </div>
                  </div>
                  <div class="col-lg-9 col-md-9 ">
                    <div class="feature-img">
                      <img class="img-fluid" src="data:image/jpg;charset=utf8;base64,<?php echo $image; ?>" style="width: 100%; height: 270px" alt="">
                    </div>
-                   <a class="posts-title" href="blog-single.html"><h3><?php echo $value['name'] ?></h3></a>
+                   <a class="posts-title" href="bookings.php?destination=<?php echo $value['id'] ?>"><h3><?php echo $value['name'] ?></h3></a>
                    <p class="excert">
                      <?php echo $value['description'] ?>
                    </p>
-                   <a href="#" class="primary-btn">Make reservation</a>
+                   <a href="bookings.php?destination=<?php echo $value['id'] ?>" class="primary-btn">Make reservation</a>
                  </div>
                </div>
              <?php endforeach; ?>

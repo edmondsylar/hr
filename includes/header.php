@@ -25,10 +25,11 @@
         </div>
         <nav id="nav-menu-container">
           <ul class="nav-menu">
-            <li><a href="./">Home.</a></li>
-            <li><a href="./about.php">About Us.</a></li>
-            <li><a href="./destinations.php">Our Destinations.</a></li>
-            <li><a href="./contact.php">Contact Us.</a></li>
+            <li><a href="./">Home</a></li>
+            <li><a href="./about.php">About Us</a></li>
+            <li><a href="./destinations.php">Our Destinations</a></li>
+            <li><a href="./gallery.php">Gallery</a></li>
+            <li><a href="./contact.php">Contact Us</a></li>
 
           </ul>
         </nav><!-- #nav-menu-container -->

@@ -35,7 +35,7 @@
          <?php foreach ($destinations as $key => $value):
            $image = base64_encode($value['image']);
            ?>
-              <div class="col-lg-4">
+              <div class="col-lg-4" onclick="window.location.href='bookings.php?destination=<?php echo $value['id'] ?>'">
                 <div class="single-destinations">
                   <div class="thumb">
                     <img src="data:image/jpg;charset=utf8;base64,<?php echo $image; ?>" style="width: 100%; height: 200px" alt="">

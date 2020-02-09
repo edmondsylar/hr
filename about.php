@@ -17,7 +17,7 @@
   </div>
 </section>
 
-<section class="insurence-one-area section-gap">
+    <section class="insurence-one-area section-gap">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-lg-6 insurence-left">
@@ -27,7 +27,7 @@
 							<h6 class="text-uppercase">About Us</h6>
 							<h1>Horizon Birding</h1>
 							<p>
-                Dedicated to ensure that your visit is never the last one with us, Horizon birdings is setting the bar for customer service, tour experiences and knowledge based ventures too high for anyone, Our main purpose is to ensure that you have the visit of a life time to our country, we porvide services that varie from tour guidance, vacations, hotel booking and travel guide advisory services. 
+                Dedicated to ensure that your visit is never the last one with us, Horizon birdings is setting the bar for customer service, tour experiences and knowledge based ventures too high for anyone, Our main purpose is to ensure that you have the visit of a life time to our country, we porvide services that varie from tour guidance, vacations, hotel booking and travel guide advisory services.
               </p>
               <h2>Taking a look?</h2>
 							<div class="list-wrap">
@@ -37,9 +37,9 @@
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
       </section>
-      
+
 
       <section class="insurence-two-area pb-120">
 				<div class="container">
@@ -57,15 +57,15 @@
 									<li> <a href="#">twitter</a> </li>
 									<li> <a href="#">instagram</a> </li>
 									<li> <a href="#">linkedIn</a> </li>
-									
+
 								</ul>
 							</div>
 						</div>
 						<div class="col-lg-6 insurence-right">
 							<img class="img-fluid img-two" src="assets/img/insurence/ChrisK1.jpeg" style="height: 500px; width: auto;" alt="">
-						</div>						
+						</div>
 					</div>
-				</div>	
+				</div>
 			</section>
 
 <<?php include_once "includes/footer.php" ?>
