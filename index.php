@@ -124,7 +124,7 @@
                    <p class="excert">
                      <?php echo $value['description'] ?>
                    </p>
-                   <a href="destinations.php" class="primary-btn">Make reservation</a>
+                   <a href="#" class="primary-btn">Make reservation</a>
                  </div>
                </div>
              <?php endforeach; ?>
@@ -136,7 +136,7 @@
            <?php endif; ?>
 
       <nav class="blog-pagination justify-content-center d-flex">
-        <a href="blog-single.html" class="primary-btn">View More</a>
+        <a href="destinations.php" class="primary-btn">View More</a>
       </nav>
       </div>
         <div class="col-lg-4 sidebar-widgets">
