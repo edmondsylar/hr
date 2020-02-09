@@ -177,7 +177,7 @@
                 $services = $cur->get_service();
                 $destinations = $cur->get_destinations();
                 ?>
-                  <?php if (!empty($services, $destinations)): ?>
+                  <?php if (!empty($services)): ?>
                     <?php foreach ($services as $key => $value): ?>
                     <li><a href="#"><?php echo $value['name'] ?></a></li>
                   <?php endforeach; ?>
