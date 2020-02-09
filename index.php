@@ -148,9 +148,9 @@
               </form>
             </div>
             <div class="single-sidebar-widget popular-post-widget">
-              <h4 class="popular-title">Popular Destination</h4>
+              <h4 class="popular-title">Services</h4>
               <div class="popular-post-list">
-                <?php for ($i=0; $i <5 ; $i++) {
+                <?php for ($i=0; $i <1 ; $i++) {
                 ?>
               <!-- the popular sites query -->
                 <div class="single-post-list d-flex flex-row align-items-center">

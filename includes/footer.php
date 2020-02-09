@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-3  col-md-6 col-sm-6">
+      <!-- <div class="col-lg-3  col-md-6 col-sm-6">
         <div class="single-footer-widget mail-chimp">
           <h6 class="mb-20">InstaFeed</h6>
           <ul class="instafeed d-flex flex-wrap">
@@ -56,18 +56,18 @@
             <li><img src="./assets/img/i8.jpg" alt=""></li>
           </ul>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="row footer-bottom d-flex justify-content-between align-items-center">
       <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | property of horizion birdings 
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | property of horizion birdings
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
       <div class="col-lg-4 col-sm-12 footer-social">
         <a href="#"><i class="fa fa-facebook"></i></a>
         <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-dribbble"></i></a>
-        <a href="#"><i class="fa fa-behance"></i></a>
+        <a href="#"><i class="fa fa-google"></i></a>
+
       </div>
     </div>
   </div>
