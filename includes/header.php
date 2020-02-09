@@ -4,7 +4,7 @@
       <div class="row align-items-center">
         <div class="col-lg-6 col-sm-6 col-6 header-top-left">
           <ul>
-            <li><a href="#">Contact US</a></li>
+            <li><a href="./contact.php">Contact US</a></li>
             <!-- <li><a href="#">Buy Tickets</a></li> -->
           </ul>
         </div>

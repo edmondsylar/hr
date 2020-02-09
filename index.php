@@ -142,7 +142,7 @@
         <div class="col-lg-4 sidebar-widgets">
           <div class="widget-wrap">
             <div class="single-sidebar-widget search-widget">
-              <form class="search-form" action="#">
+              <form class="search-form" action="destinations.php">
                   <input placeholder="Search Destinations" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search destinations'" >
                       <button type="submit"><i class="fa fa-search"></i></button>
               </form>
@@ -150,19 +150,23 @@
             <div class="single-sidebar-widget popular-post-widget">
               <h4 class="popular-title">Services</h4>
               <div class="popular-post-list">
-                <?php for ($i=0; $i <1 ; $i++) {
-                ?>
-              <!-- the popular sites query -->
-                <div class="single-post-list d-flex flex-row align-items-center">
-                  <div class="thumb">
-                    <img class="img-fluid" src="assets/img/blog/pp4.jpg" alt="">
-                  </div>
-                  <div class="details">
-                    <a href="blog-single.html"><h6>Asteroids telescope</h6></a>
-                    <p>02 Hours ago</p>
-                  </div>
-                </div>
-                <?php } ?>
+                <?php $services = $cur->get_service(); ?>
+                  <?php if (!empty($services)): ?>
+                    <?php foreach ($services as $key => $value): ?>
+                      <div class="single-post-list d-flex flex-row align-items-center">
+                        <div class="thumb">
+                          <img class="img-fluid" src="assets/img/blog/pp4.jpg" alt="">
+                        </div>
+                        <div class="details">
+                          <a href="blog-single.html"><h6><?php echo $value['name'] ?></h6></a>
+                          <p><?php echo $value['price'] ?></p>
+                        </div>
+                      </div>
+                    <?php endforeach; ?>
+                  <?php endif; ?>
+
+
+
               </div>
             </div>
 
@@ -170,10 +174,14 @@
               <h4 class="tagcloud-title">Quick navigate</h4>
               <ul>
                 <?php
-                  for ($i=0; $i < 2 ; $i++) {
-                    ?>
-                    <li><a href="#">Technology</a></li>
-                  <?php } ?>
+                $services = $cur->get_service();
+                $destinations = $cur->get_destinations();
+                ?>
+                  <?php if (!empty($services, $destinations)): ?>
+                    <?php foreach ($services as $key => $value): ?>
+                    <li><a href="#"><?php echo $value['name'] ?></a></li>
+                  <?php endforeach; ?>
+                <?php endif; ?>
               </ul>
             </div>
           </div>

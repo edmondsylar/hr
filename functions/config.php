@@ -27,10 +27,27 @@
         return $results;
       }
 
+      function get_service(){
+        $query = "SELECT * FROM services";
+        $results = mysqli_query($this->conn, $query);
+
+        return $results;
+      }
+
       function create_destination($t, $d, $p, $i){
         $qu = "INSERT INTO destinations(`name`, `description`, `price`, `image`) VALUES('$t', '$d', '$p', '$i')";
         if(mysqli_query($this->conn, $qu)){
           header("Location: ../backend/index.php");
+        }else{
+          echo mysqli_error($this->conn);
+        }
+
+      }
+
+      function create_service($t, $d, $p, $i){
+        $qu = "INSERT INTO services(`name`, `description`, `price`, `image`) VALUES('$t', '$d', '$p', '$i')";
+        if(mysqli_query($this->conn, $qu)){
+          header("Location: ../backend/services.php?msg=new service created");
         }else{
           echo mysqli_error($this->conn);
         }

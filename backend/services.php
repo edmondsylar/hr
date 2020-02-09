@@ -8,27 +8,27 @@
   </head>
   <body>
 
-    <?php include_once "header.php"; ?>
+<?php include_once "header.php" ?>
 
     <div class="container">
       <div class="card">
         <div class="card-header">
-          Add Destination
+          Create Service | <?php if(isset($_GET['msg'])){ echo $_GET['msg']; } ?>
         </div>
         <div class="card-body">
-          <form action="destination.php" method="post" enctype="multipart/form-data">
+          <form action="service.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
-              <label for="exampleInputEmail1">Destination</label>
-              <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Destination Name" required>
+              <label for="exampleInputEmail1">Service Name </label>
+              <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter service Name" required>
             </div>
 
             <div class="form-group">
               <label for="exampleInputEmail1">Price</label>
-              <input type="text" class="form-control" name="price" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter starting Price" required>
+              <input type="text" class="form-control" name="price" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Service Price" required>
             </div>
 
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Enter Desniation Description</label>
+              <label for="exampleFormControlTextarea1">Enter Service Description</label>
               <textarea class="form-control" name="desc" id="exampleFormControlTextarea1" rows="3" required></textarea>
             </div>
 
@@ -37,23 +37,11 @@
               <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
             </div>
             <br><br>
-            <button type="submit" class="btn btn-primary">Add Destination</button>
+            <button type="submit" class="btn btn-primary">Add Service</button>
           </form>
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
