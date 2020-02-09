@@ -3,7 +3,7 @@
 <body>
 <?php include_once "includes/header.php" ?>
 
-<section class="relative about-banner">
+<section class="relative" style="background: url('https://www.jamiiforums.com/data/attachment-files/2017/01/1471205_KampalaCity4-703x467.jpg'); background-repeat: no-repeat; background-size:100%;">
   <div class="overlay overlay-bg"></div>
   <div class="container">
     <div class="row d-flex align-items-center justify-content-center">
