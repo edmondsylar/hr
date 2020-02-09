@@ -96,30 +96,45 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 posts-list">
-          <div class="single-post row">
-            <div class="col-lg-3  col-md-3 meta-details">
-              <ul class="tags">
-                <li><a href="#">Hotels Around,</a></li>
-                <li><a href="#">More services,</a></li>
-                <!-- <li><a href="#">Politics,</a></li>
-                <li><a href="#">Lifestyle</a></li> -->
-              </ul>
-              <div class="user-details row">
-                <!-- <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p> -->
-                <p class="date col-lg-12 col-md-12 col-6"><a href="#">Make reseravtion</a> <span class="lnr lnr-calendar-full"></span></p>
-              </div>
-            </div>
-            <div class="col-lg-9 col-md-9 ">
-              <div class="feature-img">
-                <img class="img-fluid" src="assets/img/blog/feature-img1.jpg" style="width: 100%; height: 270px" alt="">
-              </div>
-              <a class="posts-title" href="blog-single.html"><h3>Astronomy Binoculars A Great Alternative</h3></a>
-              <p class="excert">
-                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-              </p>
-              <a href="blog-single.html" class="primary-btn">Make reservation</a>
-            </div>
-          </div>
+          <?php
+            $destinations = $cur->get_destinations();
+           ?>
+           <?php if (!empty($destinations)): ?>
+             <?php foreach ($destinations as $key => $value):
+               $image = base64_encode($value['image']);
+               ?>
+               <div class="single-post row">
+                 <div class="col-lg-3  col-md-3 meta-details">
+                   <ul class="tags">
+                     <li><a href="#">Hotels Around,</a></li>
+                     <li><a href="#">More services,</a></li>
+                     <!-- <li><a href="#">Politics,</a></li>
+                     <li><a href="#">Lifestyle</a></li> -->
+                   </ul>
+                   <div class="user-details row">
+                     <!-- <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p> -->
+                     <p class="date col-lg-12 col-md-12 col-6"><a href="#">Make reseravtion</a> <span class="lnr lnr-calendar-full"></span></p>
+                   </div>
+                 </div>
+                 <div class="col-lg-9 col-md-9 ">
+                   <div class="feature-img">
+                     <img class="img-fluid" src="data:image/jpg;charset=utf8;base64,<?php echo $image; ?>" style="width: 100%; height: 270px" alt="">
+                   </div>
+                   <a class="posts-title" href="blog-single.html"><h3><?php echo $value['name'] ?></h3></a>
+                   <p class="excert">
+                     <?php echo $value['description'] ?>
+                   </p>
+                   <a href="destinations.php" class="primary-btn">Make reservation</a>
+                 </div>
+               </div>
+             <?php endforeach; ?>
+             <div class="single-post row">
+               <p>
+                 No destinations in the database
+               </p>
+             </div>
+           <?php endif; ?>
+
       <nav class="blog-pagination justify-content-center d-flex">
         <a href="blog-single.html" class="primary-btn">View More</a>
       </nav>
@@ -128,12 +143,12 @@
           <div class="widget-wrap">
             <div class="single-sidebar-widget search-widget">
               <form class="search-form" action="#">
-                  <input placeholder="Search Posts" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Posts'" >
+                  <input placeholder="Search Destinations" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search destinations'" >
                       <button type="submit"><i class="fa fa-search"></i></button>
               </form>
             </div>
             <div class="single-sidebar-widget popular-post-widget">
-              <h4 class="popular-title">Popular Posts</h4>
+              <h4 class="popular-title">Popular Destination</h4>
               <div class="popular-post-list">
                 <?php for ($i=0; $i <5 ; $i++) {
                 ?>

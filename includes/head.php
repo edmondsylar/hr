@@ -31,3 +31,7 @@
     <link rel="stylesheet" href="./assets/css/owl.carousel.css">
     <link rel="stylesheet" href="./assets/css/main.css">
   </head>
+<?php
+  include_once "./functions/config.php";
+  $cur = new Config();
+ ?>

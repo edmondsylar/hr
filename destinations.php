@@ -28,34 +28,50 @@
               </div>
           </div> -->
     <div class="row">
-      <div class="col-lg-4">
-        <div class="single-destinations">
-          <div class="thumb">
-            <img src="assets/img/hotels/d6.jpg" style="width: 100%; height: 200px" alt="">
-          </div>
-          <div class="details">
-            <h4 class="d-flex justify-content-between">
-              <span>Destination name</span>
-              <div class="star">
-                <span class="fa fa-star checked"></span>
-              </div>
-            </h4>
-            <p>
-            </p>
-            <ul class="package-list">
+      <?php
+        $destinations = $cur->get_destinations();
+       ?>
+       <?php if (!empty($destinations)): ?>
+         <?php foreach ($destinations as $key => $value):
+           $image = base64_encode($value['image']);
+           ?>
+              <div class="col-lg-4">
+                <div class="single-destinations">
+                  <div class="thumb">
+                    <img src="data:image/jpg;charset=utf8;base64,<?php echo $image; ?>" style="width: 100%; height: 200px" alt="">
+                  </div>
+                  <div class="details">
+                    <h4 class="d-flex justify-content-between">
+                      <span><?php echo $value['name'] ?></span>
+                      <div class="star">
+                        <span class="fa fa-star checked"></span>
+                      </div>
+                    </h4>
+                    <p>
+                    </p>
+                    <ul class="package-list">
 
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Restaurant</span>
-                <span>Yes</span>
-              </li>
-              <li class="d-flex justify-content-between align-items-center">
-                <span>Price per night</span>
-                <a href="#" class="price-btn">$250</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+                      <li class="d-flex justify-content-between align-items-center">
+                        <span>Restaurant</span>
+                        <span>Yes</span>
+                      </li>
+                      <li class="d-flex justify-content-between align-items-center">
+                        <span>Package Price</span>
+                        <a href="#" class="price-btn"><?php echo $value['price'] ?></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            <?php endforeach; ?>
+          <?php else: ?>
+            <div class="single-post row">
+              <p>
+                No destinations in the database
+              </p>
+            </div>
+          <?php endif; ?>
+
     </div>
   </div>
 </section>
