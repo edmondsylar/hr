@@ -21,7 +21,7 @@
   <div class="container main-menu">
     <div class="row align-items-center justify-content-between d-flex">
         <div id="logo">
-          <h3 style="color: white;">Horizon Birdings</h3>
+          <h3 style="color: white;" onclick="window.location.href='./index.php'"> <span style="cursor: pointer;" >Horizon Birdings</span></h3>
           <!-- <a href="./"><img src="./assets/img/logo.png" alt="" title="" /></a> -->
         </div>
         <nav id="nav-menu-container">

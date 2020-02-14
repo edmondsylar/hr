@@ -22,73 +22,9 @@
   <!-- End banner Area -->
 
   <!-- Start top-category-widget Area -->
-  <section class="top-category-widget-area pt-90 pb-90 ">
-    <div class="container">
-      <div class="row">
+<div class="" style="margin: 10px;">
 
-        <div class="col-lg-4">
-          <div class="single-cat-widget">
-            <div class="content relative">
-              <div class="overlay overlay-bg"></div>
-                <a href="#" target="_blank">
-                  <div class="thumb">
-                   <img class="content-image img-fluid d-block mx-auto" src="assets/img/blog/bwatch.jpg" style="width: 100%; height: 200px;" alt="">
-                  </div>
-                  <div class="content-details">
-                    <h4 class="content-title mx-auto text-uppercase">Bird watching</h4>
-                    <span></span>
-                    <p>
-                      <!-- simple desc -->
-                    </p>
-                  </div>
-                </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="single-cat-widget">
-            <div class="content relative">
-              <div class="overlay overlay-bg"></div>
-                <a href="#" target="_blank">
-                  <div class="thumb">
-                   <img class="content-image img-fluid d-block mx-auto" src="assets/img/blog/gtrek.jpg" style="width: 100%; height: 200px;" alt="">
-                  </div>
-                  <div class="content-details">
-                    <h4 class="content-title mx-auto text-uppercase">Gorilla Treking</h4>
-                    <span></span>
-                    <p>
-                      <!-- simple desc -->
-                    </p>
-                  </div>
-                </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4">
-          <div class="single-cat-widget">
-            <div class="content relative">
-              <div class="overlay overlay-bg"></div>
-                <a href="#" target="_blank">
-                  <div class="thumb">
-                   <img class="content-image img-fluid d-block mx-auto" src="assets/img/blog/travel.jpg" style="width: 100%; height: 200px;" alt="">
-                  </div>
-                  <div class="content-details">
-                    <h4 class="content-title mx-auto text-uppercase">Travel Advisory  </h4>
-                    <span></span>
-                    <p>
-                      <!-- simple desc -->
-                    </p>
-                  </div>
-                </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+</div>
   <!-- End top-category-widget Area -->
 
   <!-- Start post-content Area -->
@@ -128,11 +64,6 @@
                  </div>
                </div>
              <?php endforeach; ?>
-             <div class="single-post row">
-               <p>
-                 No destinations in the database
-               </p>
-             </div>
            <?php endif; ?>
 
       <nav class="blog-pagination justify-content-center d-flex">
@@ -177,9 +108,9 @@
                 $services = $cur->get_service();
                 $destinations = $cur->get_destinations();
                 ?>
-                  <?php if (!empty($services)): ?>
-                    <?php foreach ($services as $key => $value): ?>
-                    <li><a href="#"><?php echo $value['name'] ?></a></li>
+                  <?php if (!empty($destinations)): ?>
+                    <?php foreach ($destinations as $key => $value): ?>
+                    <li><a href="bookings.php?destination=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></li>
                   <?php endforeach; ?>
                 <?php endif; ?>
               </ul>

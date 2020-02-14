@@ -4,7 +4,7 @@
 <?php include_once "includes/header.php" ?>
 
 <!-- <section class="relative" style="background: url(assets/img/blog/bwatch.jpg)"> -->
-<section class="relative" style="background: url('https://www.ganyanasafaris.com/wp-content/uploads/2019/04/uganda-bird-watching-tour-.jpg'); background-repeat: no-repeat; background-size:100%;">
+<section class="relative about-banner">
   <div class="overlay overlay-bg"></div>
   <div class="container">
     <div class="row d-flex align-items-center justify-content-center">

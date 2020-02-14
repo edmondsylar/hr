@@ -3,7 +3,7 @@
 <body>
 <?php include_once "includes/header.php" ?>
 
-<section class="relative about-banner">
+<section class="relative destination-banner">
   <div class="overlay overlay-bg"></div>
   <div class="container">
     <div class="row d-flex align-items-center justify-content-center">
