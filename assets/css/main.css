@@ -3284,7 +3284,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* =================================== */
 /*============ Start Blog Home Styles  =============*/
 .blog-home-banner {
-  background: url(../img/blog/bird.jpg) bottom;
+  background: url(../img/mybird.jpg) bottom;
+  /* background: url(../img/blog/bird.jpg) bottom; */
   background-size: cover;
   padding: 130px 0px;
 }

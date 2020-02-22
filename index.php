@@ -102,7 +102,7 @@
             </div>
 
             <div class="single-sidebar-widget tag-cloud-widget">
-              <h4 class="tagcloud-title">Quick navigate</h4>
+              <h4 class="tagcloud-title">Important Birding Areas</h4>
               <ul>
                 <?php
                 $services = $cur->get_service();
@@ -110,7 +110,7 @@
                 ?>
                   <?php if (!empty($destinations)): ?>
                     <?php foreach ($destinations as $key => $value): ?>
-                    <li><a href="bookings.php?destination=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></li>
+                    <li><a href="iba.php?park=<?php echo $value['id'] ?>"><?php echo $value['name'] ?></a></li>
                   <?php endforeach; ?>
                 <?php endif; ?>
               </ul>

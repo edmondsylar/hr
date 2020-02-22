@@ -1,4 +1,4 @@
-services,
-Other Guides,
-change Cover photo.
-add IBA (Important Birding Areas).
+services
+Other Guides, | done.
+change Cover photo | done.
+add IBA (Important Birding Areas) | Complete.

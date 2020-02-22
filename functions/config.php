@@ -20,6 +20,24 @@
         }
       }
 
+      function login($user, $password){
+        $pass = md5($password);
+        $login = "SELECT * FROM users WHERE email='$user' AND password='$pass'";
+        $res = mysqli_fetch_assoc(mysqli_query($this->conn, $login));
+
+        if($res['id']){
+            session_start();
+              $_SESSION["loggedin"] = true;
+              $_SESSION["email"] = $res['email'];
+              // $_SESSION["name"] = $res['fullname'];
+
+              // echo $_SESSION['name'];
+             header("Location: ../backend/home.php");
+
+          }
+
+      }
+
       function get_destinations(){
         $query = "SELECT * FROM destinations";
         $results = mysqli_query($this->conn, $query);
