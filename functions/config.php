@@ -95,6 +95,22 @@
           echo mysqli_error($this->conn);
         }
       }
+
+      function create_guide($name, $pot, $image){
+        $sq = "INSERT INTO guides(`name`, `potfolio`, `image`) VALUES('$name', '$pot', '$image')";
+        if(mysqli_query($this->conn, $sq)){
+          header("Location: ../backend/guides.php");
+        }else{
+          echo mysqli_error($this->conn);
+        }
+      }
+
+      function get_guides(){
+        $s = 'SELECT * FROM guides';
+        $results = mysqli_query($this->conn, $s);
+
+        return $results;
+      }
 // end fo function here
   }
  ?>

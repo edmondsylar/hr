@@ -24,12 +24,11 @@
 							<img class="img-fluid img-one" src="assets/img/insurence/about.jpg" alt="">
 						</div>
 						<div class="col-lg-6 insurence-right">
-							<h6 class="text-uppercase">About Us</h6>
 							<h1>Horizon Birding</h1>
 							<p>
-                Dedicated to ensure that your visit is never the last one with us, Horizon birdings is setting the bar for customer service, tour experiences and knowledge based ventures too high for anyone, Our main purpose is to ensure that you have the visit of a life time to our country, we porvide services that varie from tour guidance, vacations, hotel booking and travel guide advisory services.
-              </p>
-              <h2>Taking a look?</h2>
+								Dedicated to ensure that your visit is never the last one with us, Horizon birdings is setting the bar for customer service, tour experiences and knowledge based ventures too high for anyone, Our main purpose is to ensure that you have the visit of a life time to our country, we porvide services that varie from tour guidance, vacations, hotel booking and travel guide advisory services.
+							</p>
+							<h2>Taking a look?</h2>
 							<div class="list-wrap">
 								<ul>
 									<li> <a href="destinations.php">service one</a> </li>
