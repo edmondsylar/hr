@@ -41,6 +41,8 @@
          	 <p>
              <?php echo $area['description'] ?>
            </p>
+           <!-- <button type="button"  class="primary-btn" name="button">book</button> -->
+           <a href="bookings.php?destination=<?php echo $area['id'] ?>" class="primary-btn">book</a>
          </div>
        </div>
      </div>
