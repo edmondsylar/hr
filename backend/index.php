@@ -1,3 +1,17 @@
+<?php
+  include_once "../functions/config.php";
+  $cur = new Config();
+
+  if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+
+    $cur->login($email, $password);
+
+  }
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,14 +111,14 @@
 </head>
 <body>
 <div class="login-form">
-    <form action="/examples/actions/confirmation.php" method="post">
+    <form action="index.php" method="post">
 		<div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
     	<h4 class="modal-title">Login to Horizon Dashbord</h4>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Username" required="required">
+            <input type="text" name="email" class="form-control" placeholder="Username" required="required">
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" required="required">
+            <input type="password" name="password" class="form-control" placeholder="Password" required="required">
         </div>
         <div class="form-group small clearfix">
             <label class="checkbox-inline"><input type="checkbox"> Remember me</label>
@@ -112,7 +126,7 @@
         </div>
         <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
     </form>
-    <div class="text-center small">Don't have an account? <a href="#">Sign up</a></div>
+    <div class="text-center small">Don't have an account? <a href="register.php">Sign up</a></div>
 </div>
 </body>
 </html>

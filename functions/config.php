@@ -20,6 +20,19 @@
         }
       }
 
+      function register($names, $email, $password){
+        $pass = md5($password);
+        $sqlQ = "INSERT INTO users(`Names`, `email`, `password`) VALUES ('$name', '$email', '$pass')";
+        $res = mysqli_query($this->conn, $sqlQ);
+        if($res){
+          header("Location: ../backend/");
+
+        }else{
+          echo mysqli_error($this->conn);
+        }
+
+      }
+
       function login($user, $password){
         $pass = md5($password);
         $login = "SELECT * FROM users WHERE email='$user' AND password='$pass'";
