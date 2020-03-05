@@ -129,7 +129,7 @@
         </div> -->
         <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
     </form>
-    <div class="text-center small">Loign Instead? <a href="index.php">Register</a></div>
+    <div class="text-center small">Loign Instead? <a href="index.php">Login</a></div>
 </div>
 </body>
 </html>

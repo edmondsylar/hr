@@ -8,12 +8,16 @@
   </head>
   <body>
 
-<?php include_once "header.php" ?>
+  <?php include_once "header.php"; 
+        if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+          header("Location: index.php");
+          }
+    ?>
 
     <div class="container">
       <div class="card">
         <div class="card-header">
-          Create Service | <?php if(isset($_GET['msg'])){ echo $_GET['msg']; } ?>
+          Create Service <?php if(isset($_GET['msg'])){ echo $_GET['msg']; } ?>
         </div>
         <div class="card-body">
           <form action="service.php" method="post" enctype="multipart/form-data">

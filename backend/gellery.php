@@ -8,7 +8,11 @@
   </head>
   <body>
 
-<?php include_once "header.php" ?>
+  <?php include_once "header.php"; 
+        if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+          header("Location: index.php");
+          }
+    ?>
 
     <div class="container">
       <div class="card">
