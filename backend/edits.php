@@ -48,9 +48,11 @@
           Edit Destination
         </div>
         <div class="card-body">
-          <form action="destination.php" method="post" enctype="multipart/form-data">
+          <form action="editSubmit.php?prop=destination" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <label for="exampleInputEmail1">Destination</label>
+              <input type="hidden" value="<?php echo $object['id']; ?>" class="form-control" name="id" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Destination Name" required>
+
               <input type="text" value="<?php echo $object['name']; ?>" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Destination Name" required>
             </div>
 
@@ -65,7 +67,7 @@
             </div>
 
             <div class="custom-file form-group">
-              <input name="image" type="file" class="custom-file-input" aria-required="true" required>
+              <input name="image" type="file" class="custom-file-input" aria-required="true">
               <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
             </div>
             <br><br>
@@ -87,9 +89,11 @@
           Edit Service <?php if(isset($_GET['msg'])){ echo $_GET['msg']; } ?>
         </div>
         <div class="card-body">
-          <form action="service.php" method="post" enctype="multipart/form-data">
+          <form action="editSubmit.php?prop=service" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <label for="exampleInputEmail1">Service Name </label>
+              <input type="hidden" value="<?php echo $get['id'] ?>" class="form-control" name="id" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter service Name" required>
+
               <input type="text" value="<?php echo $get['name'] ?>" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter service Name" required>
             </div>
 
@@ -104,7 +108,7 @@
             </div>
 
             <div class="custom-file form-group">
-              <input name="image" type="file" class="custom-file-input" aria-required="true" required>
+              <input name="image" type="file" class="custom-file-input" aria-required="true">
               <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
             </div>
             <br><br>
@@ -126,9 +130,11 @@
           Edit Bird Profile
         </div>
         <div class="card-body">
-          <form action="gallery.php" method="post" enctype="multipart/form-data">
+          <form action="editSubmit.php?prop=gallery" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <label for="exampleInputEmail1">Bird Name </label>
+              <input type="hidden" class="form-control" value="<?php echo $obj['id'];?>" name="id" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter service Name" required>
+
               <input type="text" class="form-control" value="<?php echo $obj['name'];?>" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter service Name" required>
             </div>
 
@@ -138,7 +144,7 @@
             </div>
 
             <div class="custom-file form-group">
-              <input name="image" type="file" class="custom-file-input" aria-required="true" required>
+              <input name="image" type="file" class="custom-file-input" aria-required="true">
               <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
             </div>
             <br><br>
@@ -162,10 +168,12 @@
           Edit Tour Guide Information
         </div>
         <div class="card-body">
-          <form action="addGuide.php" method="post" enctype="multipart/form-data">
+          <form action="editSubmit.php?prop=guide" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <label for="exampleInputEmail1">Guid Name </label>
               <input type="text" class="form-control" value="<?php echo $guide['name']?>" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter service Name" required>
+
+              <input type="hidden" class="form-control" value="<?php echo $guide['id']?>" name="id" aria-describedby="emailHelp" placeholder="Enter service Name" required>
             </div>
 
             <div class="form-group">
@@ -174,7 +182,7 @@
             </div>
 
             <div class="custom-file form-group">
-              <input name="image" type="file" class="custom-file-input" aria-required="true" required>
+              <input name="image" type="file" class="custom-file-input" aria-required="true">
               <label class="custom-file-label" for="validatedCustomFile">Upload Profile Picture</label>
             </div>
             <br><br>

@@ -113,6 +113,16 @@
 
       }
 
+      function update_destination($id, $name, $desc){
+        $qu = "UPDATE destinations set name ='$name', description='$desc' where id='$id'";
+        if(mysqli_query($this->conn, $qu)){
+          header("Location: ../backend/home.php");
+        }else{
+          echo mysqli_error($this->conn);
+        }
+
+      }
+
       function create_service($t, $d, $p, $i){
         $qu = "INSERT INTO services(`name`, `description`, `price`, `image`) VALUES('$t', '$d', '$p', '$i')";
         if(mysqli_query($this->conn, $qu)){
@@ -121,6 +131,16 @@
           echo mysqli_error($this->conn);
         }
       }
+
+      function update_service($id, $name, $desc){
+        $qu = "UPDATE services set name='$name', description='$desc' where id='$id'";
+        if(mysqli_query($this->conn, $qu)){
+          header("Location: ../backend/home.php");
+        }else{
+          echo mysqli_error($this->conn);
+        }
+      }
+
 
       function get_dest($id){
         $q= "SELECT * FROM destinations WHERE id='$id'";
@@ -172,10 +192,31 @@
         }
       }
 
+
+      function update_gallery($id, $name, $desc){
+        $qu = "UPDATE gallery set name='$name', description='$desc' where id='$id'";
+        if(mysqli_query($this->conn, $qu)){
+          header("Location: ../backend/home.php");
+        }else{
+          echo mysqli_error($this->conn);
+        }
+      }
+
+
       function create_guide($name, $pot, $image){
         $sq = "INSERT INTO guides(`name`, `potfolio`, `image`) VALUES('$name', '$pot', '$image')";
         if(mysqli_query($this->conn, $sq)){
           header("Location: ../backend/guides.php");
+        }else{
+          echo mysqli_error($this->conn);
+        }
+      }
+
+      function updae_guide($id, $name, $pot){
+
+        $sq = "UPDATE guides SET name='$name', potfolio='$pot' where id='$id'";
+        if(mysqli_query($this->conn, $sq)){
+          header("Location: ../backend/home.php");
         }else{
           echo mysqli_error($this->conn);
         }
