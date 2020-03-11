@@ -25,7 +25,7 @@
         $sqlQ = "INSERT INTO users(`Names`, `email`, `password`) VALUES ('$name', '$email', '$pass')";
         $res = mysqli_query($this->conn, $sqlQ);
         if($res){
-          header("Location: ../backend/");
+          header("Location: ../");
 
         }else{
           echo mysqli_error($this->conn);
@@ -67,7 +67,7 @@
               // $_SESSION["name"] = $res['fullname'];
 
               // echo $_SESSION['name'];
-             header("Location: ../backend/home.php");
+             header("Location: ../home.php");
 
           }
 
@@ -106,7 +106,7 @@
       function create_destination($t, $d, $p, $i){
         $qu = "INSERT INTO destinations(`name`, `description`, `price`, `image`) VALUES('$t', '$d', '$p', '$i')";
         if(mysqli_query($this->conn, $qu)){
-          header("Location: ../backend/index.php");
+          header("Location: ../index.php");
         }else{
           echo mysqli_error($this->conn);
         }
@@ -116,7 +116,7 @@
       function update_destination($id, $name, $desc){
         $qu = "UPDATE destinations set name ='$name', description='$desc' where id='$id'";
         if(mysqli_query($this->conn, $qu)){
-          header("Location: ../backend/home.php");
+          header("Location: ../home.php");
         }else{
           echo mysqli_error($this->conn);
         }
@@ -126,7 +126,7 @@
       function create_service($t, $d, $p, $i){
         $qu = "INSERT INTO services(`name`, `description`, `price`, `image`) VALUES('$t', '$d', '$p', '$i')";
         if(mysqli_query($this->conn, $qu)){
-          header("Location: ../backend/services.php?msg=new service created");
+          header("Location: ../services.php?msg=new service created");
         }else{
           echo mysqli_error($this->conn);
         }
@@ -135,7 +135,7 @@
       function update_service($id, $name, $desc){
         $qu = "UPDATE services set name='$name', description='$desc' where id='$id'";
         if(mysqli_query($this->conn, $qu)){
-          header("Location: ../backend/home.php");
+          header("Location: ../home.php");
         }else{
           echo mysqli_error($this->conn);
         }
@@ -186,7 +186,7 @@
       function add_gallery($name, $desc, $image){
         $qu = "INSERT INTO gallery(`name`, `description`, `image`) VALUES('$name', '$desc', '$image')";
         if(mysqli_query($this->conn, $qu)){
-          header("Location: ../backend/gellery.php");
+          header("Location: ../gellery.php");
         }else{
           echo mysqli_error($this->conn);
         }
@@ -196,7 +196,7 @@
       function update_gallery($id, $name, $desc){
         $qu = "UPDATE gallery set name='$name', description='$desc' where id='$id'";
         if(mysqli_query($this->conn, $qu)){
-          header("Location: ../backend/home.php");
+          header("Location: ../home.php");
         }else{
           echo mysqli_error($this->conn);
         }
@@ -206,7 +206,7 @@
       function create_guide($name, $pot, $image){
         $sq = "INSERT INTO guides(`name`, `potfolio`, `image`) VALUES('$name', '$pot', '$image')";
         if(mysqli_query($this->conn, $sq)){
-          header("Location: ../backend/guides.php");
+          header("Location: ../guides.php");
         }else{
           echo mysqli_error($this->conn);
         }
@@ -216,7 +216,7 @@
 
         $sq = "UPDATE guides SET name='$name', potfolio='$pot' where id='$id'";
         if(mysqli_query($this->conn, $sq)){
-          header("Location: ../backend/home.php");
+          header("Location: ../home.php");
         }else{
           echo mysqli_error($this->conn);
         }
