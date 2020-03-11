@@ -8,7 +8,7 @@
   </head>
   <body>
 
-  <?php include_once "header.php"; 
+    <?php include_once "header.php"; 
         if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           header("Location: index.php");
           }
@@ -17,22 +17,22 @@
     <div class="container">
       <div class="card">
         <div class="card-header">
-          Create Service | <code> <?php if(isset($_GET['msg'])){ echo $_GET['msg']; } ?></code>
+          Add Destination
         </div>
         <div class="card-body">
-          <form action="service.php" method="post" enctype="multipart/form-data">
+          <form action="destination.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
-              <label for="exampleInputEmail1">Service Name </label>
-              <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter service Name" required>
+              <label for="exampleInputEmail1">Destination</label>
+              <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Destination Name" required>
             </div>
 
             <div class="form-group">
               <label for="exampleInputEmail1">Price</label>
-              <input type="text" class="form-control" name="price" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Service Price" required>
+              <input type="text" class="form-control" name="price" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter starting Price" required>
             </div>
 
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Enter Service Description</label>
+              <label for="exampleFormControlTextarea1">Enter Desniation Description</label>
               <textarea class="form-control" name="desc" id="exampleFormControlTextarea1" rows="3" required></textarea>
             </div>
 
@@ -41,12 +41,11 @@
               <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
             </div>
             <br><br>
-            <button type="submit" class="btn btn-primary">Add Service</button>
+            <button type="submit" class="btn btn-primary">Add Destination</button>
           </form>
         </div>
       </div>
     </div>
-
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

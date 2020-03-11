@@ -12,37 +12,59 @@
         if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
           header("Location: index.php");
           }
+        include_once "../functions/config.php";
+        $cur = new Config();
+        $intel = $cur->edit_home('admin');
+
+        // fetched info from the database.
+        $services = $intel['service'];
+        $destinations = $intel['destinations'];
+        $gallery = $intel['gallery'];
+        $guides = $intel['guides'];
     ?>
 
     <div class="container">
       <div class="card">
         <div class="card-header">
-          Add Destination
+          Manage Information
         </div>
         <div class="card-body">
-          <form action="destination.php" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Destination</label>
-              <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Destination Name" required>
-            </div>
+          
+            <h4 class="tagcloud-title card-header">Services</h4>
+              <ul>
+                  <?php if (!empty($services)): ?>
+                    <?php foreach ($services as $key => $value): ?>
+                    <li><?php echo $value['name'] ?><code><small> <a href="edits.php?id=<?php echo $value['id'] ?>&object=service">edit</a></small></code></li>
+                  <?php endforeach; ?>
+                <?php endif; ?>
+              </ul>
 
-            <div class="form-group">
-              <label for="exampleInputEmail1">Price</label>
-              <input type="text" class="form-control" name="price" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter starting Price" required>
-            </div>
+              <h4 class="tagcloud-title card-header">Destination</h4>
+              <ul>
+                  <?php if (!empty($destinations)): ?>
+                    <?php foreach ($destinations as $key => $value): ?>
+                      <li><?php echo $value['name'] ?><code><small> <a href="edits.php?id=<?php echo $value['id'] ?>&object=destination">edit</a></small></code></li>
+                  <?php endforeach; ?>
+                <?php endif; ?>
+              </ul>
 
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Enter Desniation Description</label>
-              <textarea class="form-control" name="desc" id="exampleFormControlTextarea1" rows="3" required></textarea>
-            </div>
-
-            <div class="custom-file form-group">
-              <input name="image" type="file" class="custom-file-input" aria-required="true" required>
-              <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-            </div>
-            <br><br>
-            <button type="submit" class="btn btn-primary">Add Destination</button>
-          </form>
+              <h4 class="tagcloud-title card-header">Gallery</h4>
+              <ul>
+                  <?php if (!empty($gallery)): ?>
+                    <?php foreach ($gallery as $key => $value): ?>
+                      <li><?php echo $value['name'] ?><code><small> <a href="edits.php?id=<?php echo $value['id'] ?>&object=gallery">edit</a></small></code></li>
+                  <?php endforeach; ?>
+                <?php endif; ?>
+              </ul>
+              
+              <h4 class="tagcloud-title card-header">Guides</h4>
+              <ul>
+                  <?php if (!empty($guides)): ?>
+                    <?php foreach ($guides as $key => $value): ?>
+                      <li><?php echo $value['name'] ?><code><small> <a href="edits.php?id=<?php echo $value['id'] ?>&object=guides">edit</a></small></code></li>
+                  <?php endforeach; ?>
+                <?php endif; ?>
+              </ul>
         </div>
       </div>
     </div>

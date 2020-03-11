@@ -33,6 +33,28 @@
 
       }
 
+      function edit_home($user){
+        $service = "SELECT * FROM services";
+        $destinations = "SELECT * FROM destinations";
+        $gallery = "SELECT * FROM gallery";
+        $guides = "SELECT * FROM guides";
+
+        
+        $service = mysqli_query($this->conn, $service);
+        $destinations = mysqli_query($this->conn, $destinations);
+        $gallery = mysqli_query($this->conn, $gallery);
+        $guides = mysqli_query($this->conn, $guides);
+
+        $response = Array(
+          'service'=>$service,
+          'destinations'=>$destinations,
+          'gallery'=>$gallery,
+          'guides' =>$guides,
+        );
+        
+        return ($response);
+      }
+
       function login($user, $password){
         $pass = md5($password);
         $login = "SELECT * FROM users WHERE email='$user' AND password='$pass'";
@@ -60,6 +82,22 @@
 
       function get_service(){
         $query = "SELECT * FROM services";
+        $results = mysqli_query($this->conn, $query);
+
+        return $results;
+      }
+
+      function get_ser($id){
+        $query = "SELECT * FROM services where id='$id'";
+        $results = mysqli_query($this->conn, $query);
+
+        return mysqli_fetch_assoc($results);
+      }
+
+      
+
+      function get_service_home(){
+        $query = "SELECT * FROM services LIMIT 4";
         $results = mysqli_query($this->conn, $query);
 
         return $results;
@@ -117,6 +155,13 @@
         return $results;
       }
 
+      function get_gallery_objcet($id){
+        $q= "SELECT * FROM gallery where id='$id'";
+        $results = mysqli_query($this->conn, $q);
+
+        return mysqli_fetch_assoc($results);
+      }
+
 
       function add_gallery($name, $desc, $image){
         $qu = "INSERT INTO gallery(`name`, `description`, `image`) VALUES('$name', '$desc', '$image')";
@@ -141,6 +186,13 @@
         $results = mysqli_query($this->conn, $s);
 
         return $results;
+      }
+
+      function get_guide($id){
+        $s = "SELECT * FROM guides where id='$id'";
+        $results = mysqli_query($this->conn, $s);
+
+        return mysqli_fetch_assoc($results);
       }
 // end fo function here
   }

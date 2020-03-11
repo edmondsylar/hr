@@ -78,34 +78,27 @@
                       <button type="submit"><i class="fa fa-search"></i></button>
               </form>
             </div>
-            <div class="single-sidebar-widget popular-post-widget">
-              <h4 class="popular-title">Services</h4>
-              <div class="popular-post-list">
-                <?php $services = $cur->get_service(); ?>
+
+            <div class="single-sidebar-widget tag-cloud-widget">
+              <h4 class="tagcloud-title">Services</h4>
+              <ul>
+                <?php
+                $services = $cur->get_service_home();
+                // $destinations = $cur->get_destinations();
+                ?>
                   <?php if (!empty($services)): ?>
                     <?php foreach ($services as $key => $value): ?>
-                      <div class="single-post-list d-flex flex-row align-items-center">
-                        <div class="thumb">
-                          <img class="img-fluid" src="assets/img/blog/pp4.jpg" alt="">
-                        </div>
-                        <div class="details">
-                          <a href="blog-single.html"><h6><?php echo $value['name'] ?></h6></a>
-                          <p><?php echo $value['price'] ?></p>
-                        </div>
-                      </div>
-                    <?php endforeach; ?>
-                  <?php endif; ?>
-
-
-
-              </div>
+                    <li><?php echo $value['name'] ?></li>
+                  <?php endforeach; ?>
+                <?php endif; ?>
+              </ul>
             </div>
 
             <div class="single-sidebar-widget tag-cloud-widget">
               <h4 class="tagcloud-title">Important Birding Areas</h4>
               <ul>
                 <?php
-                $services = $cur->get_service();
+                // $services = $cur->get_service();
                 $destinations = $cur->get_destinations();
                 ?>
                   <?php if (!empty($destinations)): ?>
