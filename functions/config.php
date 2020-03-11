@@ -106,7 +106,7 @@
       function create_destination($t, $d, $p, $i){
         $qu = "INSERT INTO destinations(`name`, `description`, `price`, `image`) VALUES('$t', '$d', '$p', '$i')";
         if(mysqli_query($this->conn, $qu)){
-          header("Location: ../index.php");
+          header("Location: ../home.php");
         }else{
           echo mysqli_error($this->conn);
         }
